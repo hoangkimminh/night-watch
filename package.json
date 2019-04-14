@@ -1,0 +1,18 @@
+{
+  "private": true,
+  "name": "night-watch",
+  "description": "Night Watch",
+  "repository": "git@github.com:albert-team/night-watch.git",
+  "author": "Albert Team",
+  "license": "MIT",
+  "engines": {
+    "node": ">=8.0.0",
+    "yarn": ">=1.0.0"
+  },
+  "workspaces": [
+    "packages/*"
+  ],
+  "devDependencies": {
+    "eslint": "^5.15.3"
+  }
+}
