@@ -1,19 +1,24 @@
-const fastify = require('fastify')({ ignoreTrailingSlash: true, logger: true })
-
+const fastify = require('fastify')
+const apiRoutes = require('./api/routes')
 const Scheduler = require('./scheduler')
 
-fastify.get('/', async () => {
-  return { message: 'hello world' }
+const server = fastify({ ignoreTrailingSlash: true, logger: true })
+const scheduler = new Scheduler()
+
+server.register(apiRoutes, { prefix: '/api', scheduler })
+
+server.get('/', async () => {
+  return { message: 'hello world', iam: '/' }
 })
 
 const start = async () => {
   try {
-    await fastify.listen(process.env.PORT, '::') // listen to all IPv6 and IPv4 addresses
-
-    const scheduler = new Scheduler()
-    scheduler.start()
+    Promise.all([
+      server.listen(process.env.PORT || 3000, '::'), // listen to all IPv6 and IPv4 addresses
+      scheduler.start()
+    ])
   } catch (err) {
-    fastify.log.error(err)
+    server.log.error(err)
     process.exit(1)
   }
 }
