@@ -1,11 +1,12 @@
 const { Scraper: SpidermanScraper } = require('@albert-team/spiderman')
 
 module.exports = class Scraper extends SpidermanScraper {
-  constructor() {
+  constructor(cssSelector) {
     super()
+    this.cssSelector = cssSelector
   }
 
-  async parse() {
+  parse() {
     return { data: {}, nextUrls: [] }
   }
 }

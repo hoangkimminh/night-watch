@@ -2,10 +2,10 @@
 # yarn lockfile v1
 
 
-"@albert-team/rebloom@^1.0.0":
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/@albert-team/rebloom/-/rebloom-1.0.0.tgz#8f2fc8e50d2cd575ea6a25c12abf96957f819ba9"
-  integrity sha512-ZsXsVEWiVogBoE3peJBpmcYGvzwf0xwonObGcfW4nC6vE44IVJiti6IQ00TpT1vYCuBM7e9Uaftma0LBjFytiQ==
+"@albert-team/rebloom@^1.1.0":
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/@albert-team/rebloom/-/rebloom-1.1.0.tgz#f41eda2c94d021fd897d351c2eac26d1d7fb36e6"
+  integrity sha512-lPyyHxtdsrf2C2jrke6hzuttC9fGzWOPBJTle15fcm3bf6vpAqbRu/GyOIatc6g3yWYG7jTiFMy5uwCUPyL6yA==
   dependencies:
     "@albert-team/red" "^0.5.0"
 
@@ -17,15 +17,15 @@
     node-wait-until "^1.0.0"
     redis-parser "^3.0.0"
 
-"@albert-team/spiderman@^1.7.0":
-  version "1.7.0"
-  resolved "https://registry.yarnpkg.com/@albert-team/spiderman/-/spiderman-1.7.0.tgz#3baff00cf372c60d30feaab8c9ebae2a0cf1b930"
-  integrity sha512-bEdkXnCuc+gIGmWTvqGHc96bYqtleYv2vMmQ1HAV8VE6hj84KkbK1Mg1w0Tklu0ABHdoDS07mMLeGt8EgqwSkg==
+"@albert-team/spiderman@^1.9.0-beta.0":
+  version "1.9.0-beta.0"
+  resolved "https://registry.yarnpkg.com/@albert-team/spiderman/-/spiderman-1.9.0-beta.0.tgz#ba93919eee1129a395033ab15409321ce8d8be5d"
+  integrity sha512-9x95BJEVEIEo8KGFQBVV0ALl1jyvwQZyKpRRDxIYvqG/jAwE9qwpCI1EyEufGAdSfWJQeOIKbGc+KB9438fSgw==
   dependencies:
-    "@albert-team/rebloom" "^1.0.0"
+    "@albert-team/rebloom" "^1.1.0"
     axios "^0.19.0-beta.1"
     bottleneck "^2.18.0"
-    pino "^5.12.2"
+    pino "^5.12.3"
 
 "@babel/code-frame@^7.0.0":
   version "7.0.0"
@@ -751,10 +751,22 @@ pino-std-serializers@^2.3.0:
   resolved "https://registry.yarnpkg.com/pino-std-serializers/-/pino-std-serializers-2.4.0.tgz#c0588b5ab0905ac55bae2cb61639ed93153681fb"
   integrity sha512-ysT2ylXu1aEec9k8cm/lz7emBcfpdxFWHqvHeGXf1wvfw7TKPMGhLWwS+ciHw6u4ffnmV+pkAMF4MUIZmZZdSg==
 
-pino@^5.11.1, pino@^5.12.2:
+pino@^5.11.1:
   version "5.12.2"
   resolved "https://registry.yarnpkg.com/pino/-/pino-5.12.2.tgz#e9f43d918d455684280a6015254c5ad96a91f278"
   integrity sha512-EunVRDkw/eQzgAudJiZuqzEQ20hDezixLRLrdxUMBzavvt5ot3vep7K8swRvXSgj2bKtbOmoHnrRMtYzRjfITQ==
+  dependencies:
+    fast-redact "^1.4.4"
+    fast-safe-stringify "^2.0.6"
+    flatstr "^1.0.9"
+    pino-std-serializers "^2.3.0"
+    quick-format-unescaped "^3.0.2"
+    sonic-boom "^0.7.3"
+
+pino@^5.12.3:
+  version "5.12.3"
+  resolved "https://registry.yarnpkg.com/pino/-/pino-5.12.3.tgz#5ebc7d15b3584b91de8d3cdae01ef3a10e7fb977"
+  integrity sha512-/PiX7QXOMZz7edRVGm/apt22nkdRByB6ki0ftWcDpHjjNmjnE7UubNd7NeDX7cBey27obxvBvZy3oQuJbz1+Ag==
   dependencies:
     fast-redact "^1.4.4"
     fast-safe-stringify "^2.0.6"

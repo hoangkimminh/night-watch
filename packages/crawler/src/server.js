@@ -8,7 +8,7 @@ const scheduler = new Scheduler()
 server.register(apiRoutes, { prefix: '/api', scheduler })
 
 server.get('/', async () => {
-  return { message: 'hello world', iam: '/' }
+  return { iam: '/' }
 })
 
 const start = async () => {
