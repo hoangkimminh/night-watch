@@ -6,7 +6,9 @@ module.exports = class Scheduler extends SpidermanScheduler {
   }
 
   /**
-   * Do nothing. This won't be used
+   * Do nothing. We manually enqueue URLs instead
    */
-  classifyUrl() {}
+  classifyUrl() {
+    throw new Error('This should never be executed!')
+  }
 }
