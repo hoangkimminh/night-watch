@@ -1,8 +1,11 @@
+require('dotenv-flow').config()
+
 const fastify = require('fastify')
 const apiRoutes = require('./api/routes')
 const Scheduler = require('./scheduler')
 
-const server = fastify({ ignoreTrailingSlash: true, logger: true })
+const loggerLevel = process.env.NODE_ENV !== 'production' ? 'debug' : 'info'
+const server = fastify({ ignoreTrailingSlash: true, logger: { level: loggerLevel } })
 const scheduler = new Scheduler()
 
 server.register(apiRoutes, { prefix: '/api', scheduler })

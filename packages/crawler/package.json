@@ -5,7 +5,8 @@
   "version": "0.0.1",
   "main": "src/server.js",
   "scripts": {
-    "start": "node src/server",
+    "dev": "NODE_ENV=development node src/server",
+    "start": "NODE_ENV=production node src/server",
     "docker:build": "docker build -t night-watch/crawler .",
     "docker:start": "docker run -d -p 8501:8501 --name night-watch-crawler night-watch/crawler",
     "docker:stop": "docker stop night-watch-crawler",
@@ -14,6 +15,7 @@
   },
   "dependencies": {
     "@albert-team/spiderman": "^1.9.0",
+    "dotenv-flow": "^2.0.0",
     "fastify": "^2.3.0",
     "firebase-admin": "^8.1.0",
     "jsdom": "^15.1.0",

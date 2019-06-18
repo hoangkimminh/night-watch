@@ -8,5 +8,5 @@ const app = admin.initializeApp({
 const db = app.firestore()
 
 module.exports = {
-  History: db.collection('history')
+  History: db.collection(process.env.FIREBASE_FIRESTORE_COLLECTION_PREFIX + 'history')
 }
