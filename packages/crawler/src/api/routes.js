@@ -12,7 +12,11 @@ module.exports = (server, opts, next) => {
   // run a watch
   server.post('/', async (req) => {
     const { url, cssSelectors } = req.body
-    const urlEntity = new UrlEntity(url, new Scraper(cssSelectors), new DataProcessor())
+    const urlEntity = new UrlEntity(
+      url,
+      new Scraper(cssSelectors),
+      new DataProcessor(url)
+    )
     await scheduler.scheduleUrlEntity(urlEntity)
 
     return { success: true }
