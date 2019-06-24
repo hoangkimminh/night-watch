@@ -17,9 +17,13 @@ module.exports = (server, opts, next) => {
       new Scraper(cssSelectors),
       new DataProcessor(url)
     )
-    await scheduler.scheduleUrlEntity(urlEntity)
-
-    return { success: true }
+    try {
+      await scheduler.scheduleUrlEntity(urlEntity)
+      return { success: true }
+    } catch (err) {
+      req.log.error(err.message)
+      return { success: false }
+    }
   })
 
   next()
