@@ -6,15 +6,15 @@ module.exports = class DataProcessor extends SpidermanDataProcessor {
   constructor(url) {
     super()
     this.hasher = new MetroHash64()
-    this.id = this.getId(url)
+    this.docRef = History.doc(this.getUrlId(url))
   }
 
   /**
-   * Get base64 ID from URL
+   * Get base64 ID of the URL
    * @param {string} url URL
    * @return {string} ID
    */
-  getId(url) {
+  getUrlId(url) {
     this.hasher.update(url)
     return Buffer.from(this.hasher.digest())
       .toString('base64')
@@ -22,8 +22,7 @@ module.exports = class DataProcessor extends SpidermanDataProcessor {
   }
 
   async process(data) {
-    const docRef = History.doc(this.id)
-    const doc = await docRef.get()
+    const doc = await this.docRef.get()
     const prevData = doc.exists ? doc.data() : {}
 
     for (const [css, value] of Object.entries(data)) {
@@ -32,7 +31,7 @@ module.exports = class DataProcessor extends SpidermanDataProcessor {
       }
     }
 
-    docRef.set(data, { merge: true })
+    this.docRef.set(data, { merge: true })
     return { success: true }
   }
 }
