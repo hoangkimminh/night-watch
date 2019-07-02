@@ -16,8 +16,8 @@ server.get('/', async () => {
 
 const start = async () => {
   try {
-    Promise.all([
-      server.listen(process.env.PORT || 3000, '::'), // listen to all IPv6 and IPv4 addresses
+    await Promise.all([
+      server.listen(process.env.PORT || 3002, '::'), // listen to all IPv6 and IPv4 addresses
       scheduler.start()
     ])
   } catch (err) {
