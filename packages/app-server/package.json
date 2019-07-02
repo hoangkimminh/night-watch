@@ -1,0 +1,14 @@
+{
+  "private": true,
+  "name": "@night-watch/app-server",
+  "description": "Night Watch app server",
+  "version": "0.0.1",
+  "main": "src/server.js",
+  "scripts": {
+    "dev": "NODE_ENV=development node src/server",
+    "start": "NODE_ENV=production node src/server"
+  },
+  "dependencies": {
+    "fastify": "^2.6.0"
+  }
+}
