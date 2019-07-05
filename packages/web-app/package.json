@@ -1,6 +1,6 @@
 {
   "private": true,
-  "name": "@night-watch/crawler",
+  "name": "@night-watch/web-app",
   "description": "Night Watch crawler",
   "version": "0.0.1",
   "main": "index.js",
