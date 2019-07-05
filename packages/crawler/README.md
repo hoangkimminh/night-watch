@@ -17,8 +17,8 @@ $ yarn start # yarn dev for development
 
 ## DOCUMENTATION
 
-| ROUTE  | METHOD | REQ BODY                                | RES BODY               |
-| ------ | ------ | --------------------------------------- | ---------------------- |
+| ROUTE  | METHOD | REQ BODY                                | RES BODY               | USE                     |
+| ------ | ------ | --------------------------------------- | ---------------------- | ----------------------- |
 | `/`    | GET    |                                         | `{ iam: '/' }`         |
 | `/api` | GET    |                                         | `{ iam: '/api' }`      |
-| `/api` | POST   | `{ url: string, cssSelectors: object }` | `{ success: boolean }` |
+| `/api` | POST   | `{ url: string, cssSelectors: object }` | `{ success: boolean }` | Execute a watch session |

@@ -1,4 +1,4 @@
-# NIGHT WATCH CRAWLER
+# NIGHT WATCH APP SERVER
 
 ## INSTALLATION
 
@@ -15,6 +15,7 @@ $ yarn start # yarn dev for development
 
 ## DOCUMENTATION
 
-| ROUTE  | METHOD | REQ BODY                                | RES BODY               |
-| ------ | ------ | --------------------------------------- | ---------------------- |
-| `/`    | GET    |                                         | `{ iam: '/' }`         |
+| ROUTE        | METHOD | REQ BODY                                | RES BODY               | USE           |
+| ------------ | ------ | --------------------------------------- | ---------------------- | ------------- |
+| `/`          | GET    |                                         | `{ iam: '/' }`         |
+| `/api/watch` | POST   | `{ url: string, cssSelectors: object }` | `{ success: boolean }` | Add new watch |
