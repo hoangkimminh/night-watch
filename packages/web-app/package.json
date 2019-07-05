@@ -1,0 +1,16 @@
+{
+  "private": true,
+  "name": "@night-watch/web-app",
+  "description": "Night Watch crawler",
+  "version": "0.0.1",
+  "main": "index.js",
+  "scripts": {
+    "build": "next build",
+    "start": "next"
+  },
+  "dependencies": {
+    "next": "^8.1.0",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
+  }
+}
