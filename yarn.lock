@@ -4118,6 +4118,11 @@ map-visit@^1.0.0:
   dependencies:
     object-visit "^1.0.0"
 
+materialize-css@^1.0.0-rc.2:
+  version "1.0.0-rc.2"
+  resolved "https://registry.yarnpkg.com/materialize-css/-/materialize-css-1.0.0-rc.2.tgz#b9e6b18f698c6ef77bb6b628d59147faf131eff5"
+  integrity sha512-FuQmSyq4Qv0ov7A2qXw0E6/jbQzSWx2P1pg2/XQDYTkkSc/GyiFAxu3fw9zgShwuTvyumEiw5jkxQWT9siqMBQ==
+
 maximatch@^0.1.0:
   version "0.1.0"
   resolved "https://registry.yarnpkg.com/maximatch/-/maximatch-0.1.0.tgz#86cd8d6b04c9f307c05a6b9419906d0360fb13a2"
@@ -5209,11 +5214,6 @@ react@^16.8.6:
     object-assign "^4.1.1"
     prop-types "^15.6.2"
     scheduler "^0.13.6"
-
-reactdom@^2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/reactdom/-/reactdom-2.0.0.tgz#beeac4d698e3bf3ff0523c79d336a5ff2d532036"
-  integrity sha512-uMNDdGgUECyHQwuVyt3HBAjFt07U+rKy1zFN56skgcPt7/PODbLN7OkMCevgwkX3LsGalA4/757DSVp6DX4dzA==
 
 read-pkg@^2.0.0:
   version "2.0.0"
