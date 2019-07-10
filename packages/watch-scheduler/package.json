@@ -1,7 +1,7 @@
 {
   "private": true,
-  "name": "@night-watch/app-server",
-  "description": "Night Watch app server",
+  "name": "@night-watch/watch-scheduler",
+  "description": "Night Watch watch scheduler",
   "version": "0.0.1",
   "main": "src/server.js",
   "scripts": {
@@ -9,8 +9,10 @@
     "start": "NODE_ENV=production node src/server"
   },
   "dependencies": {
+    "agenda": "^2.0.2",
     "axios": "^0.19.0",
     "dotenv-flow": "^3.0.0-rc.1",
     "fastify": "^2.6.0"
-  }
+  },
+  "devDependencies": {}
 }
