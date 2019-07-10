@@ -1,7 +1,12 @@
+require('dotenv-flow').config()
+
 const fastify = require('fastify')
+const apiRoutes = require('./api/routes')
 
 const loggerLevel = process.env.NODE_ENV !== 'production' ? 'debug' : 'info'
 const server = fastify({ ignoreTrailingSlash: true, logger: { level: loggerLevel } })
+
+server.register(apiRoutes, { prefix: '/api' })
 
 server.get('/', async () => {
   return { iam: '/' }
