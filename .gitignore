@@ -36,9 +36,6 @@ build/Release
 node_modules/
 jspm_packages/
 
-# TypeScript v1 declaration files
-typings/
-
 # Optional npm cache directory
 .npm
 
@@ -54,12 +51,15 @@ typings/
 # Yarn Integrity file
 .yarn-integrity
 
-# dotenv environment variables file
+# Yarn lock file
+yarn.lock
+
+# Next.js build output
+.next
+
+# Dotenv environment variables files
 .env
 .env.*
-
-# next.js build output
-.next
 
 # Sensitive data files
 *.private.*
