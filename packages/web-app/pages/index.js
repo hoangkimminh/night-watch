@@ -1,14 +1,5 @@
-import 'bulma/css/bulma.css'
+import 'bulma/bulma.sass'
 import '../styles/index.scss'
-import { Component } from 'react'
 
-class Index extends Component {
-  render() {
-    return (
-      <div className='container'>
-          Welcome to Night-watch
-      </div>
-    )
-  }
-}
+const Index = () => <div>Welcome to night-watch</div>
 export default Index
