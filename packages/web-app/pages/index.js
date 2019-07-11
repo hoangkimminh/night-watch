@@ -1,4 +1,3 @@
-import 'bulma/bulma.sass'
 import '../styles/index.scss'
 
 const Index = () => <div>Welcome to night-watch</div>
