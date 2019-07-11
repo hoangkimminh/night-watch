@@ -3,7 +3,7 @@
   "name": "@night-watch/web-app",
   "description": "Night Watch web app",
   "version": "0.0.1",
-  "main": "index.js",
+  "main": "pages/index.js",
   "scripts": {
     "dev" : "next",
     "build": "next build",
